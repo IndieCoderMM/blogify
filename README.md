@@ -41,9 +41,10 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ✨ Key Features  <a name="key-features"></a>
-- CRUD on blog posts
-- Likes and comments
-- User authentication
+- Create and manage blog posts
+- Read posts by other users
+- Interact by giving likes/comments
+- User authentication and authorization
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -55,11 +56,11 @@ You can visit the [live demo website here](https://github.com/indiecodermm/blogi
 
 ## 📘 Getting Started  <a name="getting-started"></a>
 
-To run this project locally, follow these steps.
+To run this project locally, you'll need to follow these steps.
 
 ### 📋 Prerequisites
 
-In order to run this project, make sure you have the following installed on your machine:
+Make sure you have the following installed on your machine:
 - [Ruby 3.1.3 or higher](https://www.ruby-lang.org/en/)
 - [Rails 7.0.4 or higher](https://rubyonrails.org/)
 - [PostgreSQL 15.2 or higher](https://www.postgresql.org/)
@@ -75,7 +76,7 @@ git clone git@github.com:IndieCoderMM/blogify.git .
 
 ### 📥 Installation
 
-Intall the required gems with:
+Install the required gems with:
 
 ```sh
 bundle install
@@ -83,7 +84,7 @@ bundle install
 
 ### 💾 Database
 
-Create database and run migrations with:
+Create the database and run migrations with:
 
 ```sh
 rails db:create
@@ -112,16 +113,17 @@ rspec spec
 
 **Hein Thant**
 
-- GitHub: [@githubhandle](https://github.com/indiecodermm)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/hthantoo)
+- GitHub: [@IndieCoderMM](https://github.com/indiecodermm)
+- LinkedIn: [@hthantoo](https://linkedin.com/in/hthantoo)
 - Gmail: hthant00chk@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎯 Future Features  <a name="future-features"></a>
 
+- [ ] Add tests
 - [ ] Create API endpoints
-- [ ] Implement user authentication
+- [ ] Implement authentication
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
