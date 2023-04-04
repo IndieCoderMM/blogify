@@ -31,7 +31,6 @@
 
 **Blogify** is a simple, easy-to-use blogging platform which allows users to create and publish their own blog posts. Users can also read posts from other users and give likes/comments.
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🧰 Tech Stack  <a name="tech-stack"></a>
@@ -84,7 +83,7 @@ bundle install
 
 ### 💾 Database
 
-Create the database and run migrations with:
+Create the databases and run migrations with:
 
 ```sh
 rails db:create
@@ -131,6 +130,8 @@ rspec spec
 
 Contributions, issues, and feature requests are welcome!
 
+Feel free to check the [issues page](https://github.com/IndieCoderMM/blogify/issues).
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💖 Show Your Support  <a name="support"></a>
@@ -142,6 +143,8 @@ If you like this project, please consider giving it a ⭐.
 ## 🙏 Acknowledgements
 
 I would like to thank all code reviewers for making this project better.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📜 License <a name="license"></a>
 
