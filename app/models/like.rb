@@ -2,8 +2,9 @@ class Like < ApplicationRecord
   belongs_to :author, class_name: 'User'
   belongs_to :post
 
+  private 
+  
   def update_counter
-    count = post.likes_counter || 0
-    post.update_columns(likes_counter: count + 1)
+    post.increment!(:likes_counter)
   end
 end

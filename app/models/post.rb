@@ -7,8 +7,9 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5)
   end
 
+  private
+  
   def update_counter
-    count = author.posts_counter || 0
-    author.update_columns(posts_counter: count + 1)
+    author.increment!(:posts_counter)
   end
 end
