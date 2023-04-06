@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'should not valid if not unique' do
-      user = User.create(name: 'Tom', bio: 'Magician', posts_counter: 3)
+      User.create(name: 'Tom', bio: 'Magician', posts_counter: 3)
       subject.name = 'tom'
       expect(subject).to_not be_valid
     end
@@ -28,9 +28,9 @@ RSpec.describe User, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'should valid if greater than 0' do
-      subject.posts_counter = 3
-      expect(subject).to be_valid
+    it 'should not valid if not integer' do
+      subject.posts_counter = 3.5
+      expect(subject).to_not be_valid
     end
   end
 end
