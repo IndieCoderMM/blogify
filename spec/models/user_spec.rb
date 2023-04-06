@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Hein', bio: 'Web Developer', posts_counter: 0) }
+  subject { described_class.new(name: 'Hein', bio: 'Web Developer', posts_counter: 0) }
 
   before { subject.save }
 
@@ -31,6 +31,22 @@ RSpec.describe User, type: :model do
     it 'should not valid if not integer' do
       subject.posts_counter = 3.5
       expect(subject).to_not be_valid
+    end
+  end
+
+  describe '#recent_posts' do
+    before do
+      4.times do |i|
+        Post.create(title: "Post#{i + 1}", author: subject, comments_counter: 0, likes_counter: 0)
+      end
+    end
+
+    it 'should return 3 most recent posts' do
+      expect(subject.recent_posts.length).to eql 3
+    end
+
+    it 'should return most recent one as first item' do
+      expect(subject.recent_posts[0].title).to eql 'Post4'
     end
   end
 end
