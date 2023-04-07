@@ -49,6 +49,10 @@ RSpec.describe Post, type: :model do
     it 'should belong to the correct user' do
       expect(subject.author).to eql user
     end
+
+    it 'should update counter of related user' do
+      expect(subject.author.posts_counter).to eql 1
+    end
   end
 
   describe '#recent_comments' do
