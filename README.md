@@ -103,7 +103,7 @@ rails server
 To run tests, run the following command:
 
 ```sh
-rspec spec
+rspec spec --format doc
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
