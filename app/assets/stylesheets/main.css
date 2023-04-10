@@ -23,10 +23,18 @@ section {
 
 /* User Page  */
 
+.user-detail {
+  width: 100%;
+}
+
 .user-bio {
   width: 100%;
   border: solid 1px;
   padding: 1rem;
+}
+
+.recent-posts {
+  width: 100%;
 }
 
 /* Post Page  */
