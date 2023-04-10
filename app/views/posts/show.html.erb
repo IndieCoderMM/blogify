@@ -1,2 +1,16 @@
-<h1>Post #<%= @post_id %></h1>
-<h2>By User #<%= @user_id %></h2>
+<section>
+    <div class="post-container">
+        <header>
+            <h2 class="post-title"><%= @post.title %> By <%= @post.author.name %></h2>
+            <div class="post-info">
+                <span>Comments: 💬<%= @post.comments_counter %></span>
+                <span>Likes: 💖<%= @post.likes_counter %></span>
+            </div>
+        </header>
+        <p class="post-content">
+            <%= @post.text %>
+        </p>
+    </div>
+
+    <%= render "shared/comment_box", comments: @post.comments %>
+</section>

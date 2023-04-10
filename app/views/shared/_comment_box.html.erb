@@ -1,0 +1,8 @@
+<ul class="comment-list">
+<% comments.each do |comment| %>
+    <li class="comment-item">
+        <span class="comment-author"><%= comment.author.name %> :</span>
+        <span class="comment-text"><%= comment.text %></span>
+    </li>
+<% end %>
+</ul>

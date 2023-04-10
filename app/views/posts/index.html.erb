@@ -1,1 +1,11 @@
-<h1>List of Posts for User #<%= @user_id %></h1>
+<section>
+    <%= render "shared/user_card", user: @user %>
+    
+    <% @user.posts.each do |post| %>
+        <%= render "shared/post_card", post: post %>
+        <%= render "shared/comment_box", comments: post.recent_comments %>
+    <% end %>
+
+    <button class="link-btn" type="button">Pagination</button>
+
+</section>

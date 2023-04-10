@@ -1,5 +1,5 @@
 <div class="post-card">
-    <h3><%= post.title %></h3>
+    <h3><%= link_to post.title, user_post_path(user_id: post.author.id, id: post.id), class: "post-card-title" %></h3>
     <p><%= post.text[0..200] %>...</p>
     <p class="post-info">
         <span>Comments: 💬<%= post.comments_counter %></span>
