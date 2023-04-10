@@ -6,7 +6,9 @@
         <p><%= @user.bio %></p>
     </div>
 
-    <% @user.posts.each do |post| %>
+    <% @user.recent_posts.each do |post| %>
         <%= render "shared/post_card", post: post %>
     <% end %>
+
+    <%= link_to "See All Posts", user_posts_path(@user.id), class: "see-all-btn" %>
 </section>

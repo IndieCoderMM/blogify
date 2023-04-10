@@ -16,7 +16,7 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 80%;
   margin: auto;
 }
@@ -27,6 +27,35 @@ section {
   width: 100%;
   border: solid 1px;
   padding: 1rem;
+}
+
+.see-all-btn {
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  background-color: #ffffff;
+  color: #000;
+  cursor: pointer;
+  transition: all 250ms;
+  user-select: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.see-all-btn:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(-1px);
+}
+
+.see-all-btn:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }
 
 /* Shared Items  */
@@ -42,10 +71,12 @@ section {
   width: 100px;
   height: 100px;
   background-color: aquamarine;
+  border: solid 2px;
 }
 
 .user-photo img {
-  object-fit: cover;
+  width: 100%;
+  object-fit: contain;
 }
 
 .user-info {
@@ -66,4 +97,14 @@ section {
   border: solid 1px;
   padding: 1rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.post-info {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
 }

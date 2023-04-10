@@ -1,4 +1,8 @@
 <div class="post-card">
     <h3><%= post.title %></h3>
-    <p><%= post.text[0..50] %></p>
+    <p><%= post.text[0..200] %>...</p>
+    <p class="post-info">
+        <span>Comments: 💬<%= post.comments_counter %></span>
+        <span>Likes: 💖<%= post.likes_counter %></span>
+    </p>
 </div>
