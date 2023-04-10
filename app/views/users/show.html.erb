@@ -1,1 +1,12 @@
-<h1>User Profile #<%= @id %></h1>
+<section>
+    <%= render "shared/user_card", user: @user %>
+
+    <div class="user-bio">
+        <h3>Bio</h3>
+        <p><%= @user.bio %></p>
+    </div>
+
+    <% @user.posts.each do |post| %>
+        <%= render "shared/post_card", post: post %>
+    <% end %>
+</section>
