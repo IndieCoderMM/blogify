@@ -8,9 +8,17 @@
                 <span>Likes: 💖<%= @post.likes_counter || 0 %></span>
             </div>
         </header>
+
         <p class="post-content">
             <%= @post.text %>
         </p>
+
+        <div class="post-btn-bar">
+            <%= link_to "Give Like", user_post_likes_path(@current, @post), class: "post-btn" %>
+            <%= link_to "Add Comment", new_user_post_comment_path(@current, @post), class: "post-btn" %>
+
+        </div>
+        
     </div>
 
     <%= render "shared/comment_box", comments: @post.comments %>

@@ -42,11 +42,8 @@ a {
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
   cursor: pointer;
-  margin: 5px;
-  padding: 10px 15px;
-}
-
-.new-post-btn a {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
   font-family: Montserrat, sans-serif;
   font-size: 0.9rem;
   color: #fff;
@@ -77,6 +74,8 @@ a {
   width: 100%;
   border: solid 1px;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .post-container header {
@@ -96,8 +95,28 @@ a {
   font-weight: 400;
 }
 
-.post-author a {
-  text-decoration: none;
+.post-btn-bar {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.post-btn {
+  cursor: pointer;
+  border: 2px solid;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px;
+  position: relative;
+  padding: 0.25em 0.5em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.post-btn:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 2px;
+  left: 2px;
 }
 
 /* Post Form  */
@@ -109,6 +128,7 @@ a {
 }
 
 .input-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -131,6 +151,16 @@ textarea {
   padding: 0.5rem 1rem;
   font-family: inherit;
   font-size: 1.1em;
+}
+
+/* Comment Form  */
+
+.comment-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* User Profile Card  */
@@ -223,16 +253,19 @@ textarea {
 }
 
 /* Comment Box  */
+.comment-container {
+  width: 100%;
+  border: solid 1px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
 
 .comment-list {
-  width: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem;
-  border: solid 1px;
-  margin-bottom: 1rem;
 }
 
 .comment-item {

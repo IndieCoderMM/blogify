@@ -1,16 +1,18 @@
-<ul class="comment-list">
+<div class="comment-container">
+    <h4>Comments</h4>
 
-<h4>Comments</h4>
+    <ul class="comment-list">
 
-<% if comments.empty? %>
-    <small>No one has commented yet.</small>
-<% end %>
+    <% if comments.empty? %>
+        <small>No one has commented yet.</small>
+    <% end %>
 
-<% comments.each do |comment| %>
-    <li class="comment-item">
-        <span class="comment-author"><%= comment.author.name %> :</span>
-        <span class="comment-text"><%= comment.text %></span>
-    </li>
-<% end %>
+    <% comments.each do |comment| %>
+        <li class="comment-item">
+            <span class="comment-author"><%= comment.author.name %> :</span>
+            <span class="comment-text"><%= comment.text %></span>
+        </li>
+    <% end %>
 
-</ul>
+    </ul>
+</div>

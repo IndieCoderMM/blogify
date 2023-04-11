@@ -5,13 +5,12 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @current = current_user
   end
 
   def new 
     @user = current_user
     @post = Post.new 
-    # respond_to do |format|
-    #   format.html { render: :new, locals: { post: post }}
   end
 
   def create 
@@ -21,8 +20,8 @@ class PostsController < ApplicationController
       flash[:success] = "New post uploaded successfully!"
       redirect_to user_post_url(current_user, @post)
     else
-      flash.now[:error] = "Post upload failed!"
-      render :new 
+      flash[:error] = "Post upload failed! Please try again."
+      redirect_to new_user_post_url(current_user)
     end
   end
 end

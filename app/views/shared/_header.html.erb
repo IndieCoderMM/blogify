@@ -2,7 +2,7 @@
     <div class="brand" >
     <%= link_to "Blogify", root_path%>
     </div>
-    <button class="new-post-btn" >
-    <%= link_to "+ New Post", new_user_post_path(current_user)%>
-    </button>
+
+    <%= link_to "+ New Post", new_user_post_path(current_user), class: "new-post-btn" %>
+
 </header>
