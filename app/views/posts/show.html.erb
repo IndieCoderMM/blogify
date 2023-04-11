@@ -18,7 +18,7 @@
             <%= form_with model: [@current, @post, Like.new] do |f| %>
                 <%= f.submit 'Give Like', class: "post-btn" %>
             <% end %>
-            <%= link_to "Add Comment", new_user_post_comment_path(@current, @post), class: "post-btn" %>
+            <%= link_to "Add Comment", new_user_post_comment_path(@post.author, @post), class: "post-btn" %>
         </div>
         
     </div>

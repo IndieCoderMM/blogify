@@ -1,12 +1,12 @@
 <%= form_with model: [@user, @post], class: "post-form" do |f| %>
 <div class="input-container" >
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, required: true %>
 </div>
 
 <div class="input-container" >
     <%= f.label :text, "Content" %>
-    <%= f.text_area :text, size: "60x10" %>
+    <%= f.text_area :text, size: "60x10", required: true %>
 </div>
 
 <%= f.submit "Create New Post", class: "submit-btn" %>
