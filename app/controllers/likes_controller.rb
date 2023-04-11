@@ -3,9 +3,11 @@ class LikesController < ApplicationController
         @post = Post.find(params[:post_id])
         @like = Like.new(author: current_user, post: @post)
         if @like.save 
-            flash[:success] = "Added a like to #{@post.name}!"
+            flash[:success] = "Gave a like to #{@post.title}!"
+            redirect_to user_post_path(@post.author, @post)
         else
-            flash.now[:error] = "Adding a like failed!"
+            flash[:error] = "Adding a like failed!"
+            redirect_to user_post_path(@post.author, @post)
         end
     end
 end

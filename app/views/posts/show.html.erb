@@ -1,4 +1,5 @@
 <section>
+    
     <div class="post-container">
         <header>
             <h2 class="post-title"><%= @post.title %></h2>
@@ -14,18 +15,19 @@
         </p>
 
         <div class="post-btn-bar">
-            <%= link_to "Give Like", user_post_likes_path(@current, @post), class: "post-btn" %>
+            <%= form_with model: [@current, @post, Like.new] do |f| %>
+                <%= f.submit 'Give Like', class: "post-btn" %>
+            <% end %>
             <%= link_to "Add Comment", new_user_post_comment_path(@current, @post), class: "post-btn" %>
-
         </div>
         
     </div>
-
-    <%= render "shared/comment_box", comments: @post.comments %>
 
     <% if flash[:success] %>
         <div class="alert alert-success" >
             <%= flash[:success] %>
         </div>
     <% end %>
+
+    <%= render "shared/comment_box", comments: @post.comments %>
 </section>
