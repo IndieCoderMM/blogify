@@ -1,2 +1,17 @@
-<h1>Post #<%= @post_id %></h1>
-<h2>By User #<%= @user_id %></h2>
+<section>
+    <div class="post-container">
+        <header>
+            <h2 class="post-title"><%= @post.title %></h2>
+            <div class="post-info">
+                <h3 class="post-author">Author: <%= link_to @post.author.name, user_path(@post.author) %></h3>
+                <span>Comments: 💬<%= @post.comments_counter || 0 %></span>
+                <span>Likes: 💖<%= @post.likes_counter || 0 %></span>
+            </div>
+        </header>
+        <p class="post-content">
+            <%= @post.text %>
+        </p>
+    </div>
+
+    <%= render "shared/comment_box", comments: @post.comments %>
+</section>

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+}
+
+/* User Page  */
+
+.user-detail {
+  width: 100%;
+}
+
+.user-bio {
+  width: 100%;
+  border: solid 1px;
+  padding: 1rem;
+}
+
+.recent-posts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Post Page  */
+
+.post-container {
+  width: 100%;
+  border: solid 1px;
+  padding: 1rem;
+}
+
+.post-container header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-size: 1.4rem;
+}
+
+.post-author {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.post-author a {
+  text-decoration: none;
+}
+
+/* Commons  */
+
+.user-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  background-color: cornflowerblue;
+  border: solid 2px;
+}
+
+.user-photo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.user-info {
+  flex: 1;
+  border: solid 1px;
+  padding: 1rem;
+}
+
+.user-info a {
+  text-decoration: none;
+}
+
+.user-info p {
+  text-align: right;
+}
+
+.post-card {
+  border: solid 1px;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.post-card-title {
+  text-decoration: none;
+}
+
+.post-info {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.link-btn {
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 250ms;
+  user-select: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.link-btn:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(-1px);
+}
+
+.link-btn:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.comment-list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: solid 1px;
+  margin-bottom: 1rem;
+}
+
+.comment-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.comment-author {
+  font-weight: 500;
+  font-size: 0.9rem;
+  min-width: 15%;
+}
+
+.comment-text {
+  font-size: 0.8rem;
+}
