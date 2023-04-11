@@ -83,6 +83,12 @@ rails db:create
 rails db:migrate
 ```
 
+To load the sample data, run:
+
+```sh
+rails db:seed
+```
+
 ### 💻 Usage
 
 To run the development server, execute the following command:
@@ -116,6 +122,7 @@ rspec spec --format doc
 - [ ] Add tests
 - [ ] Create API endpoints
 - [ ] Implement authentication
+- [ ] Improve UI
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
