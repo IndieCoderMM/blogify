@@ -14,4 +14,10 @@
     </div>
 
     <%= render "shared/comment_box", comments: @post.comments %>
+
+    <% if flash[:success] %>
+        <div class="alert alert-success" >
+            <%= flash[:success] %>
+        </div>
+    <% end %>
 </section>
