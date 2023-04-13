@@ -1,11 +1,11 @@
 bio_text = "Hello, I'm an experienced professional with a strong background in technology and innovation. Over the years, I have honed my skills in software development, data analysis, and project management. I have a keen eye for detail and a deep passion for solving complex problems through creative solutions. I believe in continuous learning and staying up-to-date with the latest industry trends."
 
 users_data = [
-    {name: "Henry Murphy", bio: bio_text, photo: "https://randomuser.me/api/portraits/men/20.jpg", posts_counter: 0 },
-    {name: "Bill Meyer", bio: bio_text, photo: "https://randomuser.me/api/portraits/men/21.jpg", posts_counter: 0 },
-    {name: "Delores Matthews", bio: bio_text, photo: "https://randomuser.me/api/portraits/women/76.jpg", posts_counter: 0 },
-    {name: "Ronnie Gregory", bio: bio_text, photo: "https://randomuser.me/api/portraits/men/23.jpg", posts_counter: 0 },
-    {name: "Rita Ford", bio: bio_text, photo: "https://randomuser.me/api/portraits/women/24.jpg", posts_counter: 0 },
+    {name: "Henry Murphy", bio: bio_text, photo: "https://randomuser.me/api/portraits/men/20.jpg"},
+    {name: "Bill Meyer", bio: bio_text, photo: "https://randomuser.me/api/portraits/men/21.jpg"},
+    {name: "Delores Matthews", bio: bio_text, photo: "https://randomuser.me/api/portraits/women/76.jpg"},
+    {name: "Ronnie Gregory", bio: bio_text, photo: "https://randomuser.me/api/portraits/men/23.jpg"},
+    {name: "Rita Ford", bio: bio_text, photo: "https://randomuser.me/api/portraits/women/24.jpg"},
 ]
 
 posts_data = [
@@ -39,12 +39,12 @@ end
 
 users.each do |user|
     posts_data.each do |post|
-        posts << Post.create(author: user, title: post[:title], text: post[:text], likes_counter: 0, comments_counter: 0)
+        posts << Post.create(author: user, title: post[:title], text: post[:text])
     end
 end
 
 posts.each do |post|
-    comments_data.each { |text| Comment.create(author: users.sample, post: post, text: text) }
-    rand(1..10).times { Like.create(author: users.sample, post: post) }
+    comments_data.shuffle.each { |text| Comment.create(author: users.sample, post: post, text: text) }
+    rand(1..15).times { Like.create(author: users.sample, post: post) }
 end
 

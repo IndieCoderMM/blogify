@@ -1,0 +1,15 @@
+<section>
+    <%= render "shared/post_card", post: @post %>
+    <%= form_with model: [@user, @post, @comment], class: "comment-form" do |f| %>
+        <div class="input-container">
+            <%= f.label :text, "Write Your Comment" %>
+            <%= f.text_area :text, rows: 2, required: true %>
+        </div>
+        <%= f.submit "Add Comment", class: "submit-btn" %>
+    <% end %>
+    <% if flash[:error] %>
+        <div class="alert alert-error" >
+            <%= flash[:error] %>
+        </div>
+    <% end %>
+</section>
