@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = Comment.new(params.require(:comment).permit(:text))
+    @comment = Comment.new(comment_params)
     @comment.author = current_user
     @comment.post = @post
     if @comment.save
@@ -17,5 +17,11 @@ class CommentsController < ApplicationController
       flash[:error] = 'Comment upload failed!'
       redirect_to new_user_post_comment_url(@post.author, @post)
     end
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:text)
   end
 end
