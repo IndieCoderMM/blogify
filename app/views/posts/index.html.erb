@@ -5,7 +5,7 @@
         <p>There is no post yet.</p>
     <% end %>
 
-    <% @user.posts.each do |post| %>
+    <% @user.posts.includes(:comments).each do |post| %>
         <%= render "shared/post_card", post: post %>
         <%= render "shared/comment_box", comments: post.recent_comments %>
     <% end %>
