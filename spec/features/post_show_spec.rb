@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Post index page', type: :feature do
+RSpec.describe 'Post show page', type: :feature do
   let!(:user) { User.create(name: 'John', bio: 'Dog lover', photo: 'john.jpg') }
   let!(:post) { Post.create(title: 'Post1', text: 'Content for post 1', author: user) }
   let!(:comment) { Comment.create(author: user, post:, text: 'Comment 1') }

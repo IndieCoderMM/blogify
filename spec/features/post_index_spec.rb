@@ -62,8 +62,8 @@ RSpec.describe 'Post index page', type: :feature do
       expect(page).to have_content("Likes: 💖#{post3.likes_counter}")
     end
 
-    it 'should have a button for pagination' do 
-      expect(page).to have_button("Pagination")
+    it 'should have a button for pagination' do
+      expect(page).to have_button('Pagination')
     end
   end
 
