@@ -109,11 +109,17 @@ rspec spec --format doc
 
 ## 👨‍🚀 Authors  <a name="author"></a>
 
-**Hein Thant**
+👤 **Hein Thant**
 
 - GitHub: [@IndieCoderMM](https://github.com/indiecodermm)
 - LinkedIn: [@hthantoo](https://linkedin.com/in/hthantoo)
 - Gmail: hthant00chk@gmail.com
+
+👤 **Thomas Obuya**
+
+- GitHub: [@githubhandle](https://github.com/tobuya)
+- Twitter: [@twitterhandle](https://twitter.com/MullerTheGreat1)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/tobuya)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
