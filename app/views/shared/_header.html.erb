@@ -4,7 +4,10 @@
     </div>
 
     <% if user_signed_in? %>
-        <%= link_to "+ New Post", new_user_post_path(current_user), class: "new-post-btn" %>
+        <div class="profile-container">
+            <%= link_to current_user.name, user_path(current_user) %>
+            <span class="user-icon"><%= current_user.name[0].upcase %></span>
+        </div>
     <% else %>
         <%= link_to 'Register New User', new_user_registration_path, class: "auth-btn" %>
     <% end %>

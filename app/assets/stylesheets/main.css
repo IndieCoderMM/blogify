@@ -24,10 +24,13 @@ a {
   text-decoration: none;
 }
 
+/* Page header  */
+
 .main-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .brand {
@@ -35,17 +38,76 @@ a {
   font-weight: 700;
 }
 
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container a {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.user-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5e5df0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  color: #fff;
+  border-radius: 50%;
+  border: solid 2px #f5c6cb;
+}
+
+/* Home Page */
+
+.tool-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.users-container {
+  width: 100%;
+  padding: 1rem;
+}
+
 .new-post-btn {
-  background-image: linear-gradient(#0dccea, #0d70ea);
+  background-color: #fcfcfd;
   border: 0;
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  font-size: 1.5rem;
   cursor: pointer;
   margin: 0.5rem;
   padding: 0.5rem 1rem;
-  font-family: Montserrat, sans-serif;
-  font-size: 0.9rem;
-  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  color: #36395a;
+  transition: all 0.2s;
+}
+
+.new-post-btn:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.new-post-btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.new-post-btn:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
 }
 
 /* User Page  */
@@ -290,6 +352,7 @@ textarea {
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+  text-align: center;
 }
 
 .alert-success {
