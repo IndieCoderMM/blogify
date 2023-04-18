@@ -1,0 +1,128 @@
+/* Form container */
+.form-container {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  min-width: 400px;
+}
+
+/* Form title */
+.form-title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-container label {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin: 0;
+}
+
+.field input::placeholder {
+  font-family: inherit;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+/* Form buttons */
+.actions {
+  margin-top: 2rem;
+}
+
+.actions input[type='submit'] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-family: inherit;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.actions input[type='submit']:hover {
+  background-color: #0056b3;
+}
+
+.error-messages {
+  margin-top: 10px;
+  color: #ff0000;
+  font-size: 14px;
+}
+
+.link-container {
+  text-align: center;
+  padding: 1rem;
+  line-height: 2;
+}
+
+.link-container a {
+  color: #007bff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.link-container a:hover {
+  color: #ff6b6b;
+}
+
+.link-container a:focus {
+  outline: none;
+}
+
+.auth-btn {
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  color: #fff;
+  cursor: pointer;
+  font-family: monospace;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  font-size: 1rem;
+}
+
+.auth-btn:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.auth-btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.auth-btn:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}

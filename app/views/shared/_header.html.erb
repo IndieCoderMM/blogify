@@ -5,5 +5,8 @@
 
     <% if user_signed_in? %>
         <%= link_to "+ New Post", new_user_post_path(current_user), class: "new-post-btn" %>
+    <% else %>
+        <%= link_to 'Register New User', new_user_registration_path, class: "auth-btn" %>
     <% end %>
+
 </header>
