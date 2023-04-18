@@ -3,6 +3,7 @@
     <%= link_to "Blogify", root_path%>
     </div>
 
-    <%= link_to "+ New Post", new_user_post_path(current_user), class: "new-post-btn" %>
-
+    <% if user_signed_in? %>
+        <%= link_to "+ New Post", new_user_post_path(current_user), class: "new-post-btn" %>
+    <% end %>
 </header>

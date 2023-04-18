@@ -1,5 +1,5 @@
 <section>
-    <%= render "shared/header", current_user: @current %>
+    <%= render "shared/header", current_user: @current_user %>
 
     <% @users.each do |user| %>
         <%= render "shared/user_card", user: user %>

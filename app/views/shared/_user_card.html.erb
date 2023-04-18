@@ -1,6 +1,10 @@
 <div class="user-card">
     <div class="user-photo">
-        <img src="<%= user.photo %>" alt="profile">
+        <% if user.photo %>
+            <img src="<%= user.photo %>" alt="profile">
+        <% else %>
+            <img src="<%= "https://randomuser.me/api/portraits/men/#{rand(1..200)}.jpg" %>" alt="profile">
+        <% end %>
     </div>
     <div class="user-info">
         <h2><%= link_to user.name, user_path(user) %></h2>
