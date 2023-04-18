@@ -83,8 +83,10 @@ a {
   background-color: #fcfcfd;
   border: 0;
   border-radius: 4px;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    #d6d6e7 0 -3px 0 inset;
   font-size: 1.5rem;
   cursor: pointer;
   margin: 0.5rem;
@@ -95,13 +97,18 @@ a {
 }
 
 .new-post-btn:focus {
-  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-shadow:
+    #d6d6e7 0 0 0 1.5px inset,
+    rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    #d6d6e7 0 -3px 0 inset;
 }
 
 .new-post-btn:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    #d6d6e7 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
