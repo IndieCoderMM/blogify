@@ -12,7 +12,7 @@
 
         <div class="post-btn-bar">
             <% if can? :destroy, @post %>
-                <%= form_with model: [@current, @post], method: :delete do |f| %>
+                <%= form_with model: [@current_user, @post], method: :delete do |f| %>
                     <%= f.submit "Delete", class: "post-btn" %>
                 <% end %>
             <% end %>
@@ -22,10 +22,12 @@
         </p>
 
         <div class="post-btn-bar">
-            <%= form_with model: [@current, @post, Like.new] do |f| %>
+        <% if @current_user %>
+            <%= form_with model: [@current_user, @post, Like.new] do |f| %>
                 <%= f.submit 'Give Like', class: "post-btn" %>
             <% end %>
             <%= link_to "Add Comment", new_user_post_comment_path(@post.author, @post), class: "post-btn" %>
+        <% end %>
         </div>
         
     </div>
