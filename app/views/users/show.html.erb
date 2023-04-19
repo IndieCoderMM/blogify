@@ -4,7 +4,7 @@
         
         <% if @current_user == @user %>
             <%= form_with url: destroy_user_session_path, method: :delete do |f| %>
-                <%= f.submit "Log Out", class: "link-btn" %>
+                <%= f.submit "Log Out", class: "btn warn-btn" %>
             <% end %>
         <% end %>
         <div class="user-bio">

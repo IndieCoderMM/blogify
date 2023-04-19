@@ -8,15 +8,15 @@
                 <span>Comments: 💬<%= @post.comments_counter || 0 %></span>
                 <span>Likes: 💖<%= @post.likes_counter || 0 %></span>
             </div>
-        </header>
-
         <div class="post-btn-bar">
             <% if can? :destroy, @post %>
                 <%= form_with model: [@current_user, @post], method: :delete do |f| %>
-                    <%= f.submit "Delete", class: "post-btn" %>
+                    <%= f.submit "Delete", class: "btn warn-btn" %>
                 <% end %>
             <% end %>
         </div>
+        </header>
+
         <p class="post-content">
             <%= @post.text %>
         </p>

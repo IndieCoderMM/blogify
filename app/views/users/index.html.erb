@@ -2,7 +2,7 @@
     <%= render "shared/header", current_user: @current_user %>
     <div class="tool-bar">
     <% if user_signed_in? %>
-        <%= link_to "+ New Post", new_user_post_path(@current_user), class: "new-post-btn" %>
+        <%= link_to "+ New Post", new_user_post_path(@current_user), class: "btn primary-btn" %>
     <% else %>
         <p>Join Blogify to create new post!</p>
     <% end %>
