@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
-    @current = current_user
+    @current_user = current_user
   end
 
   def show
