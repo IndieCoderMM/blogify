@@ -10,6 +10,13 @@
             </div>
         </header>
 
+        <div class="post-btn-bar">
+            <% if can? :destroy, @post %>
+                <%= form_with model: [@current, @post], method: :delete do |f| %>
+                    <%= f.submit "Delete", class: "post-btn" %>
+                <% end %>
+            <% end %>
+        </div>
         <p class="post-content">
             <%= @post.text %>
         </p>

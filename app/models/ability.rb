@@ -7,8 +7,8 @@ class Ability
     can :read, :all 
 
     return unless user.present?
-    can :manage, Post, author: user
-    can :manage, Comment, author: user 
+    can :manage, Post, author_id: user.id
+    can :manage, Comment, author_id: user.id
 
     return unless user.role == 'admin'
     can :manage, :all
