@@ -31,6 +31,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px;
 }
 
 .brand {
@@ -221,8 +222,13 @@ textarea {
   font-size: 1.1em;
 }
 
-/* Comment Form  */
+.submit-btn:hover {
+  background-color: #3c763d;
+  font-weight: bolder;
+  box-shadow: #3c763d 0 10px 20px -10px;
+}
 
+/* Comment Form  */
 .comment-form {
   width: 100%;
   display: flex;
