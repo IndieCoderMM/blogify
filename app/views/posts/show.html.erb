@@ -38,5 +38,5 @@
         </div>
     <% end %>
 
-    <%= render "shared/comment_box", comments: @post.comments %>
+    <%= render "shared/comment_box", comments: @post.comments, current_user: @current_user %>
 </section>
