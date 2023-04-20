@@ -14,7 +14,7 @@ gem 'sprockets-rails'
 # User authentications
 gem 'devise'
 
-# Authorization 
+# Authorization
 gem 'cancancan'
 
 # Use postgresql as the database for Active Record

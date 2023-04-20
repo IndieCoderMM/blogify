@@ -126,14 +126,54 @@
   gap: 0.25rem;
 }
 
-.comment-author {
+.commentor-info {
   font-weight: 500;
-  font-size: 0.9rem;
-  min-width: 15%;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 10%;
+}
+
+.commentor-info .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #5468ff;
+  color: #fff;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .comment-text {
+  background-color: #f8f8f8;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
   font-size: 0.8rem;
+}
+
+.remove-comment {
+  margin-left: 10px;
+}
+
+.remove-comment form {
+  display: inline-block;
+}
+
+.remove-comment button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-comment button:hover {
+  background-color: #c0392b;
 }
 
 /* Alert Message */
@@ -177,26 +217,34 @@
 }
 
 .primary-btn {
-  background-image: radial-gradient(
-    100% 100% at 100% 0,
-    #5adaff 0,
-    #5468ff 100%
-  );
+  background-image:
+    radial-gradient(
+      100% 100% at 100% 0,
+      #5adaff 0,
+      #5468ff 100%
+    );
   border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
   color: #fff;
   transition: all 0.2s;
 }
 
 .primary-btn:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow:
+    #3c4fe0 0 0 0 1.5px inset,
+    rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    #3c4fe0 0 -3px 0 inset;
 }
 
 .primary-btn:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    #3c4fe0 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
@@ -217,7 +265,7 @@
 .warn-btn:active {
   background-color: #d33a2c;
   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
-  color: #ffffff;
+  color: #fff;
 }
 
 .warn-btn:hover {

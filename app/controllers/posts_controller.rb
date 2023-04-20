@@ -13,6 +13,7 @@ class PostsController < ApplicationController
   def new
     @user = current_user
     @post = Post.new
+    @current_user = current_user
   end
 
   def create
@@ -27,9 +28,9 @@ class PostsController < ApplicationController
     end
   end
 
-  def destroy 
+  def destroy
     @post = Post.find(params[:id])
-    @post.destroy 
+    @post.destroy
 
     redirect_to user_path(current_user)
   end

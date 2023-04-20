@@ -142,6 +142,7 @@ a {
   text-transform: uppercase;
   font-size: 0.9rem;
   color: #000;
+  background-color: #fff;
 }
 
 .post-btn:active {
@@ -182,12 +183,12 @@ textarea {
   padding: 0.5rem 1rem;
   font-family: inherit;
   font-size: 1.1em;
+  transition: all 0.2s;
 }
 
 .submit-btn:hover {
-  background-color: #3c763d;
-  font-weight: bolder;
-  box-shadow: #3c763d 0 10px 20px -10px;
+  box-shadow: #3e3ec4b3 0 15px 40px -10px;
+  transform: translateY(-2px);
 }
 
 /* Comment Form  */
