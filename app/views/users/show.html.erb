@@ -1,7 +1,13 @@
 <section>
+    <%= render "shared/header", current_user: @current_user %>
     <div class="user-detail">
         <%= render "shared/user_card", user: @user %>
-
+        
+        <% if @current_user == @user %>
+            <%= form_with url: destroy_user_session_path, method: :delete do |f| %>
+                <%= f.submit "Log Out", class: "btn warn-btn" %>
+            <% end %>
+        <% end %>
         <div class="user-bio">
             <h3>Bio</h3>
             <p><%= @user.bio %></p>

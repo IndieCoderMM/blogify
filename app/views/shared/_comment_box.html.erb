@@ -1,18 +1,33 @@
 <div class="comment-container">
-    <h4>Comments</h4>
+  <h4>Comments</h4>
 
-    <ul class="comment-list">
+  <ul class="comment-list">
 
-    <% if comments.empty? %>
-        <small>No one has commented yet.</small>
-    <% end %>
+  <% if comments.empty? %>
+      <small>No one has commented yet.</small>
+  <% end %>
 
-    <% comments.each do |comment| %>
-        <li class="comment-item">
-            <span class="comment-author"><%= comment.author.name %> :</span>
-            <span class="comment-text"><%= comment.text %></span>
-        </li>
-    <% end %>
+  <% comments.each do |comment| %>
+      <li class="comment-item">
+          <div class="commentor-info">
+              <span class="avatar" style="background-color: <%= %w[green red purple orange].sample %>"><%= comment.author.name[0].upcase %></span>
+              <p><%= comment.author.name %></p>
+          </div>
 
-    </ul>
+          <div class="comment-text">
+              <p><%= comment.text %></p>
+          </div>
+
+          <% if can? :destroy, comment %>
+          <div class="remove-comment">
+              <%= form_with model: [@current_user, comment.post, comment], method: :delete do |f| %>
+                  <%= f.submit "Remove", class: "btn warn-btn" %>
+              <% end %>
+          </div>
+          <% end %>
+
+      </li>
+  <% end %>
+
+  </ul>
 </div>
