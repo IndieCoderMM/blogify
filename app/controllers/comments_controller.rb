@@ -5,17 +5,38 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
 
+  def index
+    @post = Post.find(params[:post_id])
+    @comments = @post.comments
+
+    respond_to do |format|
+      format.json { render json: @comments }
+    end
+  end
+
   def create
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
     @comment.author = current_user
     @comment.post = @post
-    if @comment.save
-      flash[:success] = 'New comment added successfully!'
-      redirect_to user_post_url(@post.author, @post)
-    else
-      flash[:error] = 'Comment upload failed!'
-      redirect_to new_user_post_comment_url(@post.author, @post)
+
+    respond_to do |format|
+      if @comment.save
+        # Rendering view for html request
+        format.html do
+          flash[:success] = 'New comment added successfully!'
+          redirect_to user_post_url(@post.author, @post)
+        end
+        # Rendering json for json request
+        format.json { render json: @comment, status: :created }
+      else
+        format.html do
+          flash[:error] = 'Comment upload failed!'
+          redirect_to new_user_post_comment_url(@post.author, @post)
+        end
+
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
     end
   end
 
