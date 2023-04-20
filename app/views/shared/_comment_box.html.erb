@@ -11,6 +11,13 @@
         <li class="comment-item">
             <span class="comment-author"><%= comment.author.name %> :</span>
             <span class="comment-text"><%= comment.text %></span>
+            <div class="post-btn-bar">
+            <% if can? :destroy, @comment %>
+                <%= form_with model: [@current_user, @comment.post, @comment], method: :delete do |f| %>
+                    <%= f.submit "Delete", class: "btn warn-btn" %>
+                <% end %>
+            <% end %>
+        </div>
         </li>
     <% end %>
 
