@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     @current_user = current_user
 
     respond_to do |format|
+      format.html
       format.json { render json: @posts }
     end
   end
