@@ -3,6 +3,11 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
     @current_user = current_user
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts }
+    end
   end
 
   def show
@@ -19,12 +24,23 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.author = current_user
-    if @post.save
-      flash[:success] = 'New post uploaded successfully!'
-      redirect_to user_post_url(current_user, @post)
-    else
-      flash[:error] = 'Post upload failed! Please try again.'
-      redirect_to new_user_post_url(current_user)
+
+    respond_to do |format|
+      if @post.save
+        format.html do
+          flash[:success] = 'New post uploaded successfully!'
+          redirect_to user_post_url(current_user, @post)
+        end
+
+        format.json { render json: @post, status: :created }
+      else
+        format.html do
+          flash[:error] = 'Post upload failed! Please try again'
+          redirect_to new_user_post_post_url(current_user)
+        end
+
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
     end
   end
 
