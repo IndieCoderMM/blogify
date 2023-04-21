@@ -4,7 +4,7 @@ info:
   title: API V1
   version: v1
 paths:
-  "/users/{id}/posts.json":
+  "/users/{id}/posts":
     get:
       summary: Lists all posts of a user
       tags:
@@ -48,6 +48,32 @@ paths:
                   - author_id
                   - created_at
                   - updated_at
+    post:
+      summary: Create a new post
+      tags:
+      - Posts
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '201':
+          description: post created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                text:
+                  type: string
+              required:
+              - title
+              - text
 servers:
 - url: https://{defaultHost}
   variables:
