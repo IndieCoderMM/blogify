@@ -49,6 +49,34 @@ paths:
                   - author_id
                   - created_at
                   - updated_at
+    post:
+      summary: Create a new comment
+      tags:
+      - Comments
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '201':
+          description: comment created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+              required:
+              - text
   "/users/{id}/posts":
     get:
       summary: Lists all posts of a user
