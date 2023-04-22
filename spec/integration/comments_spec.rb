@@ -38,4 +38,29 @@ RSpec.describe 'Comments API', type: :request do
       end
     end
   end
+
+  path '/users/{user_id}/posts/{id}/comments' do
+    post 'Create a new comment' do
+      tags 'Comments'
+      produces 'application/json'
+      consumes 'application/json'
+      parameter name: :user_id, in: :path, type: :integer
+      parameter name: :id, in: :path, type: :integer
+      parameter name: :comment_params, in: :body, schema: {
+        type: :object,
+        properties: {
+          text: { type: :string }
+        },
+        required: %w[text]
+      }
+
+      response '201', 'comment created' do
+        let(:user_id) { user.id }
+        let(:id) { post.id }
+        let(:comment_params) { { text: 'This is a test comment.' } }
+
+        run_test!
+      end
+    end
+  end
 end
